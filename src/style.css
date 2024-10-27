@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2t8fiLZNo439aVANXK0j288cq882rmKcAg&s');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+}
+
+
+.rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+}
+
+.rain {
+    position: absolute;
+    bottom: 100%;
+    width: 2px; 
+    height: 15px; 
+    background: rgb(190, 209, 236); 
+    animation: fall 1.5s linear infinite; 
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh); 
+    }
+}
+
+.weather-container {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    max-width: 400px;
+    width: 90%; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgb(9, 8, 8);
+}
+
+.weather-title {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.weather-description {
+    font-size: 16px;
+    color: #f9f6f6;
+    margin-bottom: 20px;
+}
+
+.weather-input {
+    padding: 10px;
+    width: 80%;
+    border: 2px solid #5174a9;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    outline: blue;
+    font-size: 16px;
+}
+
+.weather-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+    background-color: #01050a;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.weather-report {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #454848bb;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .weather-container {
+        padding: 15px;
+        max-width: 90%; 
+    }
+
+    .weather-title {
+        font-size: 20px; 
+    }
+
+    .weather-description {
+        font-size: 14px;
+    }
+
+    .weather-input {
+        font-size: 14px; 
+    }
+
+    .weather-button {
+        font-size: 14px; 
+    }
+
+    .weather-report h1 {
+        font-size: 18px; 
+    }
+
+    .weather-report p {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .weather-container {
+        padding: 10px;
+    }
+
+    .weather-title {
+        font-size: 18px; 
+    }
+
+    .weather-description {
+        font-size: 12px; 
+    }
+}
